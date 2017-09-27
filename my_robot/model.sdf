@@ -118,5 +118,14 @@
       <child>camera::link</child>
       <parent>chassis</parent>
     </joint>
+
+	<include>
+      <uri>model://noisy_imu</uri>
+      <pose>0.05 0 0.25 0 0 3.1415</pose>
+    </include>
+    <joint name="imu_joint" type="fixed">
+      <child>imu::link</child>
+      <parent>chassis</parent>
+    </joint>
   </model>
 </sdf>
